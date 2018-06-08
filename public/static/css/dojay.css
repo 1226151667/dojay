@@ -1,0 +1,88 @@
+/*基础样式重置*/
+body{
+	font-family: '微软雅黑','黑体','宋体';
+	font-size: 12px;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,li,ol{
+	list-style: none;
+}
+a,a:hover{
+	text-decoration: none;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.container{
+	width: 1200px;
+	margin:0 auto;
+}
+img{
+	vertical-align: middle;
+}
+/*头部样式*/
+nav{
+	position: absolute;
+	z-index: 99;
+	width: 98%;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 1%;
+}
+nav ul li{
+	float: left;
+	text-align: center;
+}
+nav .nav li{
+	width: 100px;
+}
+nav .contact div{
+	display: none;
+	width: 120px;
+	font-size: 16px;
+	color: white;
+}
+nav .contact li{
+	width: 60px;
+}
+nav ul li a{
+	display: block;
+	width: 100%;
+	color: white;
+}
+nav ul li a:hover{
+	color: #ffda00;
+	border-bottom: 3px solid #ffda00;
+}
+
+/*底部样式*/
+footer{
+	height: 250px;
+	background-color: #232c35;
+}
+footer,footer a{
+	color: white;
+}
+footer dl dt{
+	font-size: 30px;
+	height: 100px;
+	line-height: 100px;
+}
+footer dl dd{
+	height: 30px;
+	line-height: 30px;
+}
+.footer_r{
+	text-align: right;
+}
+.footer_r_c a{
+	display: inline-block;
+	width: 60px;
+	text-align: center;
+}

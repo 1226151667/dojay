@@ -1,0 +1,136 @@
+<footer>
+	<div class="container">
+		<dl class="fl footer_l">
+			<dt>请联系我们 PLEASE CONTACT US</dt>
+			<dd>
+				上海斗捷网络科技有限公司
+			</dd>
+			<dd>
+				地址：上海市浦东新区东方明珠
+			</dd>
+			<dd>
+				电话：18018597991	18939873459
+			</dd>
+			<dd>
+				邮箱：kf@shdoujie.com
+			</dd>
+		</dl>
+		<dl class="fr footer_r">
+			<dt><img src="/static/images/logo_w.png"></dt>
+			<dd class="footer_r_c">
+				<a href=""><img src="/static/images/qq_w.png"></a>&nbsp;|&nbsp;
+				<a href=""><img src="/static/images/qq_w.png"></a>&nbsp;|&nbsp;
+				<a href=""><img src="/static/images/qq_w.png"></a>&nbsp;|&nbsp;
+				<a href=""><img src="/static/images/qq_w.png"></a>
+			</dd>
+			<dd>
+				<a href="">关于斗捷</a>&nbsp;|&nbsp;
+				<a href="">服务项目</a>&nbsp;|&nbsp;
+				<a href="">成功案例</a>&nbsp;|&nbsp;
+				<a href="">新闻资讯</a>&nbsp;|&nbsp;
+				<a href="">联系斗捷</a>
+			</dd>
+			<dd>
+				<a href="">斗捷小程序</a>&nbsp;|&nbsp;
+				<a href="">斗捷微平台</a>&nbsp;|&nbsp;
+				<a href="">百度开发者大会</a>&nbsp;|&nbsp;
+				<a href="">阿里云计算</a>
+			</dd>
+			<dd>Copyright ©2018 DOJAY-斗捷网络 沪ICP备1221312-1</dd>
+		</dl>
+	</div>
+</footer>
+</body>
+{js href="/static/js/jquery-3.1.1.min.js" /}
+<script type="text/javascript">
+// 导航栏-联系按钮
+$(".contact li").hover(function(){
+	c_li_i = $(".contact li").index(this);
+	c_div = $(this).parent().find("div").eq(c_li_i);
+	c_div.show();
+},function(){
+	c_div.hide();
+})
+
+
+	$(".banner").height($(window).height()-120);
+
+
+$(function(){
+	// var slide = function(options){
+		
+	// 	this.options = $.extend({
+	// 		"o": ".banner",
+	// 		"m": ".banner_main",
+	// 		"auto" : true,
+	// 		"c_time" : 3000,
+	// 		"a_time" : 1500,
+	// 		"n" : 0
+	// 	},options);
+	// 	this.init();
+	// };
+
+	// slide.prototype.init = function(){
+	// 	n = 0;
+	// 	t = $(this.options.m+" div").length;
+	// 	banner_h = $(this.options.m).height();
+	// 	banner_w = $(this.options.m).width();
+	// 	$(this.options.m+" img").css({'right':banner_w});
+
+	// 	anm = setInterval('slide.prototype.play()', 200);
+	// 	// $("#banner").hover(function() {
+	// 	// 	clearInterval(t)
+	// 	// },
+	// 	// function() {
+	// 	// 	t = setInterval("showAuto()", 4000);
+	// 	// });
+	// };
+	// slide.prototype.play = function(){
+	// 	$(slide.options.m+" div").hide();
+	// 	var cur_div = $(this.options.m+" div").eq(n);
+	// 	cur_div.css({'background-color':cur_div.attr("bg_color")}).show().find("img").animate({'right':"0"},this.options.a_time);
+	// 	n = n>= (t-1)?0:++n;
+	// };
+
+
+
+
+var slide = {
+    opt: {
+		"o": ".banner",
+		"m": ".banner_main",
+		"auto" : true,
+		"c_time" : 3000,
+		"a_time" : 1500,
+		"n" : 0
+    },
+    init : function(options) {
+    	slide.opt = $.extend(slide.opt,options);
+		slide.t = $(slide.opt.m+" div").length;
+		slide.banner_h = $(slide.opt.m).height();
+		slide.banner_w = $(slide.opt.m).width();
+		$(slide.opt.m+" img").css({'right':slide.banner_w});
+		slide.play();
+		anm = setInterval("slide.play()", slide.opt.c_time);
+		// clearInterval(anm);
+    },
+    play : function(){
+    	slide.opt.n = (slide.opt.n>=slide.t-1)?0:(++slide.opt.n);
+		$(slide.opt.m+" div").hide();
+		var cur_div = $(slide.opt.m+" div").eq(slide.opt.n);
+		$(slide.opt.m+" img").css({'right':slide.banner_w});
+		$(slide.opt.o).css({'background':cur_div.attr("bg_color")+' url('+cur_div.attr("bg_img")+') left bottom no-repeat'});//url('+cur_div.attr("bg_img")+') left bottom no-repeat
+		cur_div.show().find("img").animate({'right':"0"},slide.opt.a_time);
+	}
+}
+
+
+
+
+
+	window.slide = slide;
+}());
+slide.init();
+</script>
+</script>
+</html>

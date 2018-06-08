@@ -1,0 +1,22 @@
+/*banner*/
+.banner{
+	width: 100%;
+	padding: 60px 0;
+}
+.banner_main{
+	overflow: hidden;
+	top: 500px;
+}
+.banner_main,.banner_main div{
+	height: 100%;
+}
+.banner_main div{
+	display: none;
+}
+.banner img{
+	display: block;
+	height: 100%;
+	margin: auto;
+	position: relative;
+	right:-1500px;
+}
