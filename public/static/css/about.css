@@ -73,12 +73,35 @@
 }
 
 .about_culture{
+	margin-top: 150px;
 	background: url(../images/about_bg2.jpg) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	padding: 150px 0;
+	padding: 100px 0;
+}
+.about_culture h1{
+	text-align: center;
+	color: white;
+}
+.about_culture_main{
+	margin-top: 100px;
+	display:flex;
+	justify-content:space-between;
+}
+.about_culture_main span{
+	width: 280px;
+	height: 180px;
+	padding: 20px;
+	background-color: white;
+}
+.about_culture_main strong{
+	font-size: 20px;
+	line-height: 60px;
+}
+.about_culture_main span p{
+	line-height: 30px;
 }
 
 .about_text{
