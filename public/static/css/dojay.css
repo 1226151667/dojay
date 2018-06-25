@@ -7,11 +7,18 @@ body{
 	margin: 0;
 	padding: 0;
 }
+@font-face{
+    font-family: impact;
+    src: url('../fonts/IMPACT.TTF');
+}
 ul,li,ol{
 	list-style: none;
 }
 a,a:hover{
 	text-decoration: none;
+}
+img{
+	vertical-align: middle;
 }
 .fl{
 	float: left;
@@ -19,12 +26,31 @@ a,a:hover{
 .fr{
 	float: right;
 }
-.container{
-	width: 1200px;
+.container_w{
+	width: 1180px;
 	margin:0 auto;
 }
-img{
-	vertical-align: middle;
+.container{
+	width: 1180px;
+	margin:0 auto;
+	padding-bottom: 80px;
+	padding-top: 30px;
+}
+.container_title{
+	font-size: 30px;
+	height: 120px;
+	line-height: 120px;
+}
+.container_more{
+	display: inline-block;
+	width: 170px;
+	height: 50px;
+	border-radius: 25px;
+	background-color: #1e6ad2;
+	color: white;
+	text-align: center;
+	line-height: 50px;
+	margin: 30px 0;
 }
 /*头部样式*/
 nav{
@@ -63,7 +89,7 @@ nav ul li a:hover{
 
 /*底部样式*/
 footer{
-	height: 250px;
+	height: 270px;
 	background-color: #232c35;
 }
 footer,footer a{
@@ -85,4 +111,152 @@ footer dl dd{
 	display: inline-block;
 	width: 60px;
 	text-align: center;
+}
+
+/*news*/
+.news ul li{
+	float: left;
+	width: 50%;
+}
+.news ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 20px 0;
+	color: black;
+}
+.news ul li a:hover{
+	box-shadow: 1px 1px 10px 1px #e0e0e0;	
+}
+.news ul li a div{
+	display: inline-block;
+	height: 90px;
+	overflow: hidden;
+}
+.news .new_date{
+	line-height: 40px;
+	text-align: center;
+	width: 20%;
+	font-size: 14px;
+}
+.news .new_date strong{
+	font-size: 40px;
+	border-bottom: 2px solid #e1e1e1;
+}
+.news .new_main{
+	line-height: 30px;
+	width: 71%;	
+	padding: 0 4%;
+	border-left: 1px solid #e1e1e1;
+}
+.news .new_main strong{
+	font-size: 14px;
+}
+.news .new_main p{
+	color: #8c8484;
+}
+
+/*process*/
+.process{
+	border-bottom: 1px solid #e0e0e0
+}
+.process_main>li{
+	float: left;
+}
+.process_main>li>ul>li{
+	height: 154px;
+}
+.process_item{
+	width: 321px;
+}
+.process_ico{
+	width: 60px;
+}
+.process_item div{
+	float: left;
+	display: inline-block;
+	height: 60px;
+	margin-left: 20px;
+	margin-top: 47px;
+}
+.process_ico img{
+	margin-top: 60px;	
+}
+.process_item div:not(.process_text){
+	width:60px;
+	line-height: 60px;
+}
+.process_text{
+	line-height: 20px;
+	width: 121px;
+}
+.process_num{
+	font-family: 'impact';
+	font-size: 40px;
+}
+
+/*partners*/
+.partners ul li{
+	float: left;
+	width: 20%;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+
+/*about*/
+.about{
+	background: url(../images/about_bg.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 200px 0;
+}
+.about_main{
+	width: 1000px;
+	margin: auto;
+	padding: 50px 0;
+	text-align: center;
+	background-color: rgba(55,63,71,0.95);
+	color: white;
+	font-size: 18px;
+	line-height: 50px;
+}
+
+/*share*/
+.detail_bottom{
+	width:100%;
+	padding: 80px 0;
+}
+.detail_bottom .share li{
+	float: left;
+	margin-right: 30px;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	line-height: 36px;
+	border-radius: 20px;
+	background-color: #232c35;
+}
+.detail_bottom .share li a{
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+.detail_bottom .share li:hover{
+	background-color: #1e6ad2;
+}
+.detail_bottom .next{
+	display: block;
+	height: 40px;
+	width: 140px;
+	border-radius: 20px;
+	background-color: #232c35;
+	color: white;
+	line-height: 40px;
+	text-align: center;
+}
+.detail_bottom .next:hover{
+	background-color: #1e6ad2;
 }

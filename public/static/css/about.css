@@ -1,0 +1,91 @@
+.about_adv{
+	background: url(../images/about_bg1.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 150px 0;
+}
+.about_adv h1,.about_adv p{
+	text-align: center;
+	color: white;
+}
+.about_adv h1{
+	line-height: 60px;
+	font-size: 30px;
+}
+.about_adv p{
+	line-height: 30px;
+}
+.about_adv ul{
+	display: flex;
+}
+.about_adv ul li{
+	height: 150px;
+	flex: 1;-webkit-flex: 1;-moz-box-flex: 1;-ms-flex: 1;
+	text-align: center;
+	margin-top: 100px;
+	padding: 0 40px;
+}
+.about_adv ul li img{
+	height: 100%;
+}
+.about_adv ul li span{
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	border-radius: 5px;
+	line-height: 24px;
+	background-color: white;
+}
+.about_adv ul li span strong{
+	font-size: 20px;
+	line-height: 40px;
+}
+
+.about_computer{
+	background-color: #1E6AD2;
+	margin-top:150px;
+	line-height: 30px;
+	color: white;
+	height: 350px;
+	text-align: center;
+	padding: 30px 0;
+}
+.about_computer span,.about_computer img{
+	display: inline-block;
+}
+.about_computer span{
+	width: 30%;
+	padding: 0 7%;
+}
+.about_computer span strong{
+	font-size: 20px;
+	line-height: 80px;
+}
+.about_computer span p{
+	text-align: left;
+}
+.about_computer img{
+	position: relative;
+	bottom: 150px;
+	width: 54%;
+}
+
+.about_culture{
+	background: url(../images/about_bg2.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 150px 0;
+}
+
+.about_text{
+	margin: 80px 0;
+	text-align: center;
+	line-height: 50px;
+}
+.about_text h1{
+	line-height: 100px;
+}

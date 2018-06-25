@@ -53,56 +53,22 @@ $(".contact li").hover(function(){
 })
 
 
-	$(".banner").height($(window).height()-120);
+$(".banner").height($(window).height()-120);
 
-
+// BANNER轮播插件
 $(function(){
-	// var slide = function(options){
-		
-	// 	this.options = $.extend({
-	// 		"o": ".banner",
-	// 		"m": ".banner_main",
-	// 		"auto" : true,
-	// 		"c_time" : 3000,
-	// 		"a_time" : 1500,
-	// 		"n" : 0
-	// 	},options);
-	// 	this.init();
-	// };
-
-	// slide.prototype.init = function(){
-	// 	n = 0;
-	// 	t = $(this.options.m+" div").length;
-	// 	banner_h = $(this.options.m).height();
-	// 	banner_w = $(this.options.m).width();
-	// 	$(this.options.m+" img").css({'right':banner_w});
-
-	// 	anm = setInterval('slide.prototype.play()', 200);
-	// 	// $("#banner").hover(function() {
-	// 	// 	clearInterval(t)
-	// 	// },
-	// 	// function() {
-	// 	// 	t = setInterval("showAuto()", 4000);
-	// 	// });
-	// };
-	// slide.prototype.play = function(){
-	// 	$(slide.options.m+" div").hide();
-	// 	var cur_div = $(this.options.m+" div").eq(n);
-	// 	cur_div.css({'background-color':cur_div.attr("bg_color")}).show().find("img").animate({'right':"0"},this.options.a_time);
-	// 	n = n>= (t-1)?0:++n;
-	// };
-
-
-
-
 var slide = {
     opt: {
-		"o": ".banner",
-		"m": ".banner_main",
-		"auto" : true,
-		"c_time" : 3000,
-		"a_time" : 1500,
-		"n" : 0
+		"o": ".banner", //最外层banner
+		"m": ".banner_main", //banner主要部分
+		"l": ".banner_cg", //banner切换按钮
+		"auto" : true, //是否自动播放（功能未开发）
+		"c_time" : 3500, //banner切换时间
+		"a_time" : 1500, //banner显示完成所需时间
+		"n" : 0, //从第几个banner开始（以0开始）
+		"cur_li_class": "cur_li", //banner切换按钮（当前）
+		"li_w": 80, //banner切换非当前按钮宽度
+		"cur_li_w": 110 //banner切换当前按钮宽度
     },
     init : function(options) {
     	slide.opt = $.extend(slide.opt,options);
@@ -110,25 +76,40 @@ var slide = {
 		slide.banner_h = $(slide.opt.m).height();
 		slide.banner_w = $(slide.opt.m).width();
 		$(slide.opt.m+" img").css({'right':slide.banner_w});
-		slide.play();
+		slide.create_li();
+		slide.play(slide.opt.n);
 		anm = setInterval("slide.play()", slide.opt.c_time);
-		// clearInterval(anm);
+		$(document).on('click', slide.opt.l+' li span', function(e) {
+			clearInterval(anm);
+			i = $(slide.opt.l+" li").index($(this).parent());
+			slide.play(i);
+			anm = setInterval("slide.play()", slide.opt.c_time);
+		});
     },
-    play : function(){
-    	slide.opt.n = (slide.opt.n>=slide.t-1)?0:(++slide.opt.n);
+    play : function(n){
+    	if(n==undefined){
+    		slide.opt.n = (slide.opt.n>=slide.t-1)?0:(++slide.opt.n);
+    	}else{
+    		slide.opt.n = n;
+    	}
 		$(slide.opt.m+" div").hide();
 		var cur_div = $(slide.opt.m+" div").eq(slide.opt.n);
 		$(slide.opt.m+" img").css({'right':slide.banner_w});
-		$(slide.opt.o).css({'background':cur_div.attr("bg_color")+' url('+cur_div.attr("bg_img")+') left bottom no-repeat'});//url('+cur_div.attr("bg_img")+') left bottom no-repeat
+		$(slide.opt.o).css({'background':cur_div.attr("bg_color")+' url('+cur_div.attr("bg_img")+') left bottom no-repeat'});
 		cur_div.show().find("img").animate({'right':"0"},slide.opt.a_time);
+		slide.change_li();
+	},
+	create_li : function(){
+		for (var i=slide.t-1;i>0;i--) {
+			$(slide.opt.l).append($(slide.opt.l+" li").eq(0).clone(true));	
+		}
+		$(slide.opt.l).width((slide.opt.li_w)*(slide.t-1)+slide.opt.cur_li_w).find("li").eq(0).addClass(slide.opt.cur_li_class);
+	},
+	change_li : function(){
+		$(slide.opt.l+" li").removeClass(slide.opt.cur_li_class).eq(slide.opt.n).addClass(slide.opt.cur_li_class);	
 	}
 }
-
-
-
-
-
-	window.slide = slide;
+window.slide = slide;
 }());
 slide.init();
 </script>

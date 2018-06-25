@@ -1,0 +1,29 @@
+#contact{
+	background: url(../images/contact_bg.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-size: 100% 100%;
+	padding: 400px 0 100px;
+}
+#contact .contact_main{
+	height: 80px;
+	background-color: white;
+}
+.contact_main ul{
+	display: flex;
+}
+.contact_main li{
+	flex: 1;-webkit-flex: 1;-moz-box-flex: 1;-ms-flex: 1;
+	text-align: center;
+	width: 150px;
+}
+.contact_main li dt{
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 50px;
+}
+.contact_main li dd{
+	line-height: 30px;
+}

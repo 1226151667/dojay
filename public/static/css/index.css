@@ -20,3 +20,102 @@
 	position: relative;
 	right:-1500px;
 }
+.banner_cg{
+	position: relative;
+	width: 110px;
+	height: 8px;
+	margin: auto;
+	top:26px;
+}
+.banner_cg li{
+	float: left;
+	width: 80px;
+	height: 8px;
+	text-align: center;
+}
+.banner_cg li span{
+	display: inline-block;
+	width: 50px;
+	height: 8px;
+	border-radius: 4px;
+	background-color: white;
+	cursor: pointer;
+}
+.banner_cg .cur_li{
+	width: 110px;
+}
+.banner_cg .cur_li span{
+	width: 80px;
+	background-color: #ffda00;
+}
+
+/*service*/
+.service a{
+	color: black;
+}
+.service ul{
+	width: 100%;
+}
+.service ul{
+	display: flex;
+}
+.service ul li{
+	flex: 1;-webkit-flex: 1;-moz-box-flex: 1;-ms-flex: 1;
+	text-align: center;
+	padding: 55px 0;
+}
+.service ul li .item{
+	font-size: 16px;
+	margin: 15px 0;
+}
+.service ul li:hover{
+	box-shadow: 1px 1px 10px 1px #e0e0e0;
+}
+
+/*advantage*/
+.advantage{
+	background: url(/static/images/advantage_bg.jpg);
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	color: #eee;
+	line-height: 30px;
+}
+.advantage ul li{
+	float: left;
+	width: 50%;
+	margin: 20px 0;
+}
+.advantage strong{
+	color: #ffda00;
+	font-size: 14px;
+}
+
+
+
+/*case*/
+.case{
+	background: url(/static/images/case_bg.jpg);
+	background-size: 100% 100%;
+	/*background-attachment: fixed;*/
+	color: #eee;
+	line-height: 30px;
+}
+.case ul{
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+}
+.case ul li{
+	float: left;
+	margin-right: 20px;
+}
+.case ul li a{
+	display: block;
+	width: 100%;
+	color: white;
+}
+.case ul li a:hover{
+	color: #ffda00;
+	border-bottom: 3px solid #ffda00;
+}
+
