@@ -8,6 +8,10 @@ class Index extends Controller{
         	'is_more' => true
         ]);
     }
+    public function service(){
+        $cate = request()->param('cate');
+        return $this->fetch($cate);
+    }
     public function news(){
     	if($id = request()->param('id')){
     		return $this->fetch('new_detail');

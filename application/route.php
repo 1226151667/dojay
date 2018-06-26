@@ -12,3 +12,4 @@
 use \think\Route;
 Route::bind('index/Index');
 Route::rule('news/[:id]', 'index/Index/news', 'GET',[], ['id'=>'[1-9]\d*']);
+Route::rule('service/:cate', 'index/Index/service', 'GET',[], ['cate'=>'\w+']);

@@ -1,0 +1,68 @@
+#app .app_cate{
+	margin: 50px 0;
+	display:flex;
+	justify-content:space-between;
+}
+#app .app_cate li{
+	cursor: pointer;
+	width: 50%;
+	height: 160px;
+	line-height: 160px;
+	text-align: center;
+}
+#app .app_cate li:not(.app_cate_active):hover{
+	background-color: #515c88;
+}
+#app .app_cate li:not(.app_cate_active) img:nth-child(2){
+	display: none;
+}
+#app .app_cate_active{
+	background-color: #242d50;
+}
+
+#app .app_cate_active img:nth-child(1){
+	display: none;
+}
+
+
+#app .app_item>div:not(.app_item_active){
+	display: none;
+}
+#app .app_text{
+	width: 60%;
+	margin: auto;
+	text-align: center;
+	line-height: 30px;
+}
+#app .app_text h2{
+	line-height: 80px;
+}
+
+#app .app_adv{
+	margin-bottom: 50px;
+}
+#app .app_adv h2{
+	line-height: 100px;
+}
+#app .app_adv h3{
+	line-height: 50px;
+}
+#app .app_adv span{
+	line-height: 30px;
+}
+#app .app_adv>div{
+	text-align: center;
+	border: 1px solid #e4e4e4;
+}
+#app .app_adv_row1{
+	display:flex;
+	justify-content:space-between;
+}
+#app .app_adv_row1 div:nth-child(1){
+	border-right: 1px solid #e4e4e4;
+}
+#app .app_adv>div>div{
+	width: 50%;
+	margin:auto;
+	padding: 30px;
+}

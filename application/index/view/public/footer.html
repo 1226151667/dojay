@@ -112,6 +112,17 @@ var slide = {
 window.slide = slide;
 }());
 slide.init();
+
+
+// app
+$(".app_cate li").click(function(){
+	var i = $(".app_cate li").index(this);
+	$(".app_cate>li").removeClass('app_cate_active').eq(i).addClass('app_cate_active');
+	$(".app_item>div").removeClass('app_item_active').eq(i).addClass('app_item_active');
+})
+
+
+
 </script>
 </script>
 </html>

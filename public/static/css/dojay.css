@@ -1,7 +1,7 @@
 /*基础样式重置*/
 body{
 	font-family: '微软雅黑','黑体','宋体';
-	font-size: 14px;
+	font-size: 13px;
 }
 *{
 	margin: 0;
@@ -85,6 +85,18 @@ nav ul li a{
 nav ul li a:hover{
 	color: #ffda00;
 	border-bottom: 3px solid #ffda00;
+}
+
+nav ul>li:hover ul{
+	display: block;
+}
+nav ul>li>ul{
+	display: none;
+}
+nav ul>li>ul>li>a{
+	background-color: #232c35;
+	height: 40px;
+	line-height: 40px;
 }
 
 /*底部样式*/
