@@ -1,0 +1,32 @@
+#h5 h2{
+	line-height: 80px;
+}
+
+#h5 .title{
+	font-weight: bold;
+	font-size: 14px;
+}
+#h5 .h5_title{
+	text-align: center;
+	line-height: 30px;
+}
+
+#h5 .h5_advs>div{
+	float: left;
+	width: 50%;
+	padding: 100px 0;
+}
+#h5 .h5_advs>div>div{
+	float: left;
+	width: 50%;
+	text-align: center;
+	margin-bottom: 80px;
+}
+#h5 .h5_advs>div>div>p{
+	width: 50%;
+	line-height: 30px;
+	margin: auto;
+}
+#h5 .h5_advs>div>div>img{
+	margin-bottom: 20px;
+}
