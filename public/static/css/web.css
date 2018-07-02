@@ -1,0 +1,23 @@
+#web h2{
+	text-align: center;
+	line-height: 80px;
+}
+
+#web .web_adv{
+	float: left;
+	width: 50%;
+}
+#web .web_adv:nth-child(2n){
+	/*border-left: 1px solid #d8d8d8;*/
+}
+#web .web_adv>div{
+	float: left;
+	height: 168px;
+}
+#web .web_adv_img{
+	line-height: 168px;
+}
+#web .web_adv_text{
+	margin-left: 50px;
+	line-height: 24px;
+}

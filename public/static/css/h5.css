@@ -11,10 +11,19 @@
 	line-height: 30px;
 }
 
+#h5 .h5_advs{
+	width: 1000px;
+	margin: auto;
+}
 #h5 .h5_advs>div{
 	float: left;
-	width: 50%;
 	padding: 100px 0;
+}
+#h5 .h5_advs .h5_advs_img{
+	width: 40%;
+}
+#h5 .h5_advs .h5_adv{
+	width: 60%;
 }
 #h5 .h5_advs>div>div{
 	float: left;
