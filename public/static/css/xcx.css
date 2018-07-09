@@ -1,0 +1,31 @@
+#xcx .xcx_title{
+	margin-top: 100px;
+	text-align: center;
+	line-height: 30px;
+}
+#xcx .title{
+	font-weight: bold;
+	font-size: 14px;
+}
+#xcx .xcx_m{
+	display: flex;
+	justify-content:space-around;
+	flex-wrap:wrap;
+}
+#xcx .xcx_mt{
+	width: 350px;
+	text-align: center;
+	margin-top: 60px;
+}
+#xcx .xcx_mt img{
+	margin-bottom: 20px;
+}
+#xcx .xcx_mt p{
+	width: 240px;
+	margin:auto;
+	line-height: 30px;
+}
+
+#xcx .xcx_t{
+	margin: 100px 0;
+}

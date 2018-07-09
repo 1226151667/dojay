@@ -1,23 +1,37 @@
 #web h2{
 	text-align: center;
 	line-height: 80px;
+	margin: 30px 0;
 }
 
 #web .web_adv{
 	float: left;
 	width: 50%;
 }
-#web .web_adv:nth-child(2n){
-	/*border-left: 1px solid #d8d8d8;*/
-}
-#web .web_adv>div{
-	float: left;
+#web .web_adv_main{
 	height: 168px;
+	padding: 30px 96px;
+}
+#web .web_adv:nth-child(2n) .web_adv_main{
+	border-left: 1px solid #d8d8d8;
+}
+#web .web_adv:nth-child(-n+2){
+	border-bottom: 1px solid #d8d8d8;
+}
+#web .web_adv>div>div{
+	float: left;
 }
 #web .web_adv_img{
+	width: 80px;
 	line-height: 168px;
+	display: table-cell;
+    text-align: center;
 }
 #web .web_adv_text{
 	margin-left: 50px;
 	line-height: 24px;
+}
+
+#web .web_good{
+	margin-top: 80px;
 }
