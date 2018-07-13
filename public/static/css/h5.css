@@ -39,3 +39,24 @@
 #h5 .h5_advs>div>div>img{
 	margin-bottom: 20px;
 }
+
+#h5 .h5_ui_main{
+	position: relative;
+	width: 600px;
+	margin: auto;
+}
+#h5 .h5_ui_content{
+	position: absolute;
+	padding-top: 50px;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+#h5 .h5_ui_ictitle{
+	margin-top: 150px;
+}
+#h5 .h5_ui_ictitle span{
+	display: block;
+	float: left;
+	width: 200px;
+}

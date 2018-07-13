@@ -121,7 +121,18 @@ $(".app_cate li").click(function(){
 	$(".app_item>div").removeClass('app_item_active').eq(i).addClass('app_item_active');
 })
 
-
+//service_case
+$(".service_case li a").hover(function(){
+	line_w = $(this).width();
+	line_h = $(this).height();
+	$(this).find('.service_case_mark').stop(true).animate({'opacity':'0.5'},800);
+	$(this).find('.service_case_line').stop(true).animate({'width':0.9*line_w,'height':0.9*line_h,'opacity':'0.8','top':line_h*0.05,'left':line_w*0.05},800);
+	$(this).find('.service_case_title').stop(true).animate({'margin-top':'0'},800);
+},function(){
+	$(this).find('.service_case_mark').stop(true).animate({'opacity':'0'},400);
+	$(this).find('.service_case_line').stop(true).animate({'width':line_w,'height':line_h,'opacity':'0','top':'0','left':'0'},400);
+	$(this).find('.service_case_title').stop(true).animate({'margin-top':'120px'},400);
+})
 
 </script>
 </script>
