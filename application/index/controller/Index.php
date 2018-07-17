@@ -29,4 +29,13 @@ class Index extends Controller{
         	'is_more' => false
         ]);
     }
+    public function cases(){
+        if($id = request()->param('id')){
+            return $this->fetch('case_detail');
+        }else{
+            return $this->fetch('cases',[
+                'is_more' => false
+            ]);
+        }
+    }
 }

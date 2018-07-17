@@ -1,9 +1,6 @@
-#web h2{
-	text-align: center;
-	line-height: 80px;
-	margin: 30px 0;
+#web .big_title{
+	margin: 50px 0;
 }
-
 #web .web_adv{
 	float: left;
 	width: 50%;
@@ -33,5 +30,5 @@
 }
 
 #web .web_good{
-	margin-top: 80px;
+	margin-top: 100px;
 }

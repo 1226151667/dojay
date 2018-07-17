@@ -92,12 +92,14 @@ var slide = {
     	}else{
     		slide.opt.n = n;
     	}
-		$(slide.opt.m+" div").hide();
-		var cur_div = $(slide.opt.m+" div").eq(slide.opt.n);
-		$(slide.opt.m+" img").css({'right':slide.banner_w});
-		$(slide.opt.o).css({'background':cur_div.attr("bg_color")+' url('+cur_div.attr("bg_img")+') left bottom no-repeat'});
-		cur_div.show().find("img").animate({'right':"0"},slide.opt.a_time);
-		slide.change_li();
+		$(slide.opt.m+" div").hide(0,function(){
+			var cur_div = $(slide.opt.m+" div").eq(slide.opt.n);
+			$(slide.opt.m+" img").css({'right':slide.banner_w});
+			$(slide.opt.o).css({'background':cur_div.attr("bg_color")+' url('+cur_div.attr("bg_img")+') left bottom no-repeat'});
+			cur_div.show().find("img").animate({'right':"0"},slide.opt.a_time);
+			slide.change_li();	
+		});
+		
 	},
 	create_li : function(){
 		for (var i=slide.t-1;i>0;i--) {
@@ -109,6 +111,7 @@ var slide = {
 		$(slide.opt.l+" li").removeClass(slide.opt.cur_li_class).eq(slide.opt.n).addClass(slide.opt.cur_li_class);	
 	}
 }
+
 window.slide = slide;
 }());
 slide.init();
@@ -125,13 +128,39 @@ $(".app_cate li").click(function(){
 $(".service_case li a").hover(function(){
 	line_w = $(this).width();
 	line_h = $(this).height();
-	$(this).find('.service_case_mark').stop(true).animate({'opacity':'0.5'},800);
+	title_mt = $(this).find('.case_title').css('margin-top');
+	mark_color = $(this).attr('mark-color');
+	mark_color = (mark_color!="")?mark_color:'rgb(0.0,0)';
+	$(this).find('.service_case_mark').stop(true).css("background-color",mark_color).animate({'opacity':'0.9'},800);
 	$(this).find('.service_case_line').stop(true).animate({'width':0.9*line_w,'height':0.9*line_h,'opacity':'0.8','top':line_h*0.05,'left':line_w*0.05},800);
 	$(this).find('.service_case_title').stop(true).animate({'margin-top':'0'},800);
 },function(){
 	$(this).find('.service_case_mark').stop(true).animate({'opacity':'0'},400);
 	$(this).find('.service_case_line').stop(true).animate({'width':line_w,'height':line_h,'opacity':'0','top':'0','left':'0'},400);
-	$(this).find('.service_case_title').stop(true).animate({'margin-top':'120px'},400);
+	$(this).find('.service_case_title').stop(true).animate({'margin-top':title_mt},400);
+})
+
+// case
+$(".case_cates li a").click(function(){
+	var cate = $(this).attr('cate');
+	$(".case_cates li a").removeClass('active');
+	$(this).addClass('active');
+	$(".case_item").hide();
+	$("."+$(this).attr('cate')).show();
+})
+$(".case_item a").hover(function(){
+	line_w = $(this).width();
+	line_h = $(this).height();
+	title_mt = $(this).find('.case_title').css('margin-top');
+	mark_color = $(this).attr('mark-color');
+	mark_color = (mark_color!="")?mark_color:'rgb(0.0,0)';
+	$(this).find('.case_mark').stop(true).css("background-color",mark_color).animate({'opacity':'0.9'},800);
+	$(this).find('.case_line').stop(true).animate({'width':0.9*line_w,'height':0.9*line_h,'opacity':'0.8','top':line_h*0.05,'left':line_w*0.05},800);
+	$(this).find('.case_title').stop(true).animate({'margin-top':'0'},800);
+},function(){
+	$(this).find('.case_mark').stop(true).animate({'opacity':'0'},400);
+	$(this).find('.case_line').stop(true).animate({'width':line_w,'height':line_h,'opacity':'0','top':'0','left':'0'},400);
+	$(this).find('.case_title').stop(true).animate({'margin-top':title_mt},400);
 })
 
 </script>

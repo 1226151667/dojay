@@ -51,7 +51,11 @@
 
 /*service*/
 .service a{
+	display: block;
+	width: 100%;
+	height: 100%;
 	color: black;
+	padding: 55px 0;
 }
 .service ul{
 	width: 100%;
@@ -62,7 +66,6 @@
 .service ul li{
 	flex: 1;-webkit-flex: 1;-moz-box-flex: 1;-ms-flex: 1;
 	text-align: center;
-	padding: 55px 0;
 }
 .service ul li .item{
 	font-size: 16px;
@@ -92,30 +95,5 @@
 
 
 
-/*case*/
-.case{
-	background: url(/static/images/case_bg.jpg);
-	background-size: 100% 100%;
-	/*background-attachment: fixed;*/
-	color: #eee;
-	line-height: 30px;
-}
-.case ul{
-	width: 100%;
-	height: 60px;
-	line-height: 60px;
-}
-.case ul li{
-	float: left;
-	margin-right: 20px;
-}
-.case ul li a{
-	display: block;
-	width: 100%;
-	color: white;
-}
-.case ul li a:hover{
-	color: #ffda00;
-	border-bottom: 3px solid #ffda00;
-}
+
 

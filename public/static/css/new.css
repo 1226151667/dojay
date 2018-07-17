@@ -1,6 +1,6 @@
 /*新闻列表*/
 #new .new_top{
-	padding: 100px 0;
+	padding: 100px 0 40px;
 	background: url(../images/new/new_bg.jpg);
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -10,7 +10,7 @@
 #new .new_title{
 	background-color: #1e6ad2;
 	display: inline-block;
-	padding: 50px 80px;
+	padding: 30px 50px;
 	font-size: 30px;
 	color: white;
 }

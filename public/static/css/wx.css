@@ -1,19 +1,15 @@
-#wx h2{
-	line-height: 80px;
-}
 #wx .title{
 	font-weight: bold;
 	font-size: 14px;
 }
-#wx .wx_title{
+#wx .page_title{
 	width:800px;
-	margin:50px auto;
-	text-align: center;
-	line-height: 30px;
+	margin:52px auto;
 }
 #wx .wx_adv{
 	border: 1px solid #d8d8d8;
 	padding: 30px 60px;
+	margin-bottom: 50px;
 }
 #wx .wx_adv ul{
 	border-left: 1px dashed #3e597a;
