@@ -128,7 +128,7 @@ $(".app_cate li").click(function(){
 $(".service_case li a").hover(function(){
 	line_w = $(this).width();
 	line_h = $(this).height();
-	title_mt = $(this).find('.case_title').css('margin-top');
+	title_mt = $(this).find('.service_case_title').css('margin-top');
 	mark_color = $(this).attr('mark-color');
 	mark_color = (mark_color!="")?mark_color:'rgb(0.0,0)';
 	$(this).find('.service_case_mark').stop(true).css("background-color",mark_color).animate({'opacity':'0.9'},800);
