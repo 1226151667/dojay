@@ -18,7 +18,11 @@
 	line-height: 30px;
 }
 .about_adv ul{
-	display: flex;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 }
 .about_adv ul li{
 	height: 150px;
@@ -87,14 +91,17 @@
 }
 .about_culture_main{
 	margin-top: 100px;
-	display:flex;
-	justify-content:space-between;
 }
 .about_culture_main span{
+	display: block;
+	float: left;
 	width: 280px;
 	height: 180px;
 	padding: 20px;
 	background-color: white;
+}
+.about_culture_main span:not(:first-child){
+	margin-left: 110px;
 }
 .about_culture_main strong{
 	font-size: 20px;

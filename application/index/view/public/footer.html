@@ -51,6 +51,12 @@ $(".contact li").hover(function(){
 },function(){
 	c_div.hide();
 })
+$(".contact div").hover(function(){
+	c_div = $(this);
+	c_div.show();
+},function(){
+	c_div.hide();
+})
 
 
 $(".banner").height($(window).height()-120);
@@ -128,16 +134,15 @@ $(".app_cate li").click(function(){
 $(".service_case li a").hover(function(){
 	line_w = $(this).width();
 	line_h = $(this).height();
-	title_mt = $(this).find('.service_case_title').css('margin-top');
 	mark_color = $(this).attr('mark-color');
 	mark_color = (mark_color!="")?mark_color:'rgb(0.0,0)';
-	$(this).find('.service_case_mark').stop(true).css("background-color",mark_color).animate({'opacity':'0.9'},800);
-	$(this).find('.service_case_line').stop(true).animate({'width':0.9*line_w,'height':0.9*line_h,'opacity':'0.8','top':line_h*0.05,'left':line_w*0.05},800);
-	$(this).find('.service_case_title').stop(true).animate({'margin-top':'0'},800);
+	$(this).find('.service_case_mark').css("background-color",mark_color).stop(true,true).animate({'opacity':'0.9'},800);
+	$(this).find('.service_case_line').stop(true,true).animate({'width':0.9*line_w,'height':0.9*line_h,'opacity':'0.8','top':line_h*0.05,'left':line_w*0.05},800);
+	$(this).find('.service_case_title').stop(true,true).animate({'margin-top':'0'},800);
 },function(){
-	$(this).find('.service_case_mark').stop(true).animate({'opacity':'0'},400);
-	$(this).find('.service_case_line').stop(true).animate({'width':line_w,'height':line_h,'opacity':'0','top':'0','left':'0'},400);
-	$(this).find('.service_case_title').stop(true).animate({'margin-top':title_mt},400);
+	$(this).find('.service_case_mark').stop(true,true).animate({'opacity':'0'},400);
+	$(this).find('.service_case_line').stop(true,true).animate({'width':line_w,'height':line_h,'opacity':'0','top':'0','left':'0'},400);
+	$(this).find('.service_case_title').stop(true,true).animate({'margin-top':'120px'},400);
 })
 
 // case
@@ -151,18 +156,17 @@ $(".case_cates li a").click(function(){
 $(".case_item a").hover(function(){
 	line_w = $(this).width();
 	line_h = $(this).height();
-	title_mt = $(this).find('.case_title').css('margin-top');
+	title_mt = ($(".case_item a").index(this)==0)?"380px":"120px";
 	mark_color = $(this).attr('mark-color');
 	mark_color = (mark_color!="")?mark_color:'rgb(0.0,0)';
-	$(this).find('.case_mark').stop(true).css("background-color",mark_color).animate({'opacity':'0.9'},800);
-	$(this).find('.case_line').stop(true).animate({'width':0.9*line_w,'height':0.9*line_h,'opacity':'0.8','top':line_h*0.05,'left':line_w*0.05},800);
-	$(this).find('.case_title').stop(true).animate({'margin-top':'0'},800);
+	$(this).find('.case_mark').stop(true,true).css("background-color",mark_color).animate({'opacity':'0.9'},800);
+	$(this).find('.case_line').stop(true,true).animate({'width':0.9*line_w,'height':0.9*line_h,'opacity':'0.8','top':line_h*0.05,'left':line_w*0.05},800);
+	$(this).find('.case_title').stop(true,true).animate({'margin-top':'0'},800);
 },function(){
-	$(this).find('.case_mark').stop(true).animate({'opacity':'0'},400);
-	$(this).find('.case_line').stop(true).animate({'width':line_w,'height':line_h,'opacity':'0','top':'0','left':'0'},400);
-	$(this).find('.case_title').stop(true).animate({'margin-top':title_mt},400);
+	$(this).find('.case_mark').stop(true,true).animate({'opacity':'0'},400);
+	$(this).find('.case_line').stop(true,true).animate({'width':line_w,'height':line_h,'opacity':'0','top':'0','left':'0'},400);
+	$(this).find('.case_title').stop(true,true).animate({'margin-top':title_mt},400);
 })
 
-</script>
 </script>
 </html>

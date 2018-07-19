@@ -46,14 +46,19 @@
 }
 
 #wx .wx_good{
-	display: flex;
-	justify-content:space-between;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 }
 #wx .wx_good_item{
 	width: 220px;
-	height: 370px;
+	height: 320px;
 	padding: 15px;
-	background-color: red;
+}
+#wx .wx_good_item:not(:first-child){
+	margin-left: 100px;
 }
 #wx .wx_good_item:nth-child(2n-1){
 	background-color: #ff9600;
@@ -64,12 +69,10 @@
 #wx .wx_good_content{
 	height: 100%;
 	border:1px dashed white;
-	display: flex;
-	flex-direction:column;
-	align-items:center;
 }
 #wx .wx_good_content div{
-	width: 80%;
+	padding: 40px 0;
+	width: 90%;
 	height: auto;
 	margin: auto;
 	text-align: center;

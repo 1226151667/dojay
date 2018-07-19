@@ -8,14 +8,16 @@
 	font-size: 14px;
 }
 #xcx .xcx_m{
-	display: flex;
-	justify-content:space-around;
-	flex-wrap:wrap;
+	
 }
 #xcx .xcx_mt{
+	float: left;
 	width: 350px;
 	text-align: center;
 	margin-top: 60px;
+}
+#xcx .xcx_mt:not(:nth-child(3n)){
+	margin-left: 65px;
 }
 #xcx .xcx_mt img{
 	margin-bottom: 20px;

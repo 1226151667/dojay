@@ -1,7 +1,10 @@
 #app .app_cate{
 	margin: 50px 0;
-	display:flex;
-	justify-content:space-between;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 }
 #app .app_cate li{
 	cursor: pointer;
@@ -55,8 +58,15 @@
 	border: 1px solid #e4e4e4;
 }
 #app .app_adv_row1{
-	display:flex;
-	justify-content:space-between;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+#app .app_adv div span{
+	display: inline-block;
+	width: 90%;
 }
 #app .app_adv_row1 div:nth-child(1){
 	border-right: 1px solid #e4e4e4;
@@ -64,5 +74,7 @@
 #app .app_adv>div>div{
 	width: 50%;
 	margin:auto;
-	padding: 30px;
+}
+#app .app_adv_row1>div,#app .app_adv_row2>div{
+	padding: 50px 0;
 }
