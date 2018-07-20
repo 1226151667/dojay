@@ -43,7 +43,8 @@
 </body>
 {js href="/static/js/jquery-3.1.1.min.js" /}
 <script type="text/javascript">
-// 导航栏-联系按钮
+// 导航栏
+$(".nav .nav_{$Request.action}").addClass('active');
 $(".contact li").hover(function(){
 	c_li_i = $(".contact li").index(this);
 	c_div = $(this).parent().find("div").eq(c_li_i);

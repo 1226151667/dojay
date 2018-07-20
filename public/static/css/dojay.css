@@ -92,7 +92,7 @@ nav ul li a{
 	color: white;
 	background-image:url(about:blank);
 }
-nav ul li a:hover{
+nav ul li a:hover,nav ul li .active{
 	color: #ffda00;
 	border-bottom: 3px solid #ffda00;
 }
